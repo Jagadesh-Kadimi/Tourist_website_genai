@@ -10,19 +10,27 @@ function Hero() {
           and personalized AI travel plans.
         </p>
 
-        <div className="flex justify-center items-center mb-8">
-          <input
-            type="text"
-            placeholder="Search your dream destination..."
-            className="w-[500px] h-14 px-5 py-4 rounded-l-full text-gray-800 outline-none shadow-lg"
-          />
+        <div className="flex items-center bg-white rounded-full shadow-xl max-w-3xl mx-auto overflow-hidden">
 
-          <button className="h-14 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-10 rounded-r-full transition duration-300">Search</button>
-        </div>
+            <span className="text-2xl px-5">🔍</span>
 
-        <button className="bg-white text-blue-600 font-bold px-8 py-4 rounded-full hover:bg-gray-200 transition duration-300 shadow-lg">
-          Explore Now
-        </button>
+            <input
+              type="text"
+              placeholder="Search your dream destination..."
+              className="flex-1 py-4 pr-4 outline-none text-gray-700"
+            />
+
+            <button className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-8 py-4 transition duration-300">
+              Search
+            </button>
+
+          </div>
+
+        <div className="mt-8">
+  <button className="bg-white text-blue-600 font-bold px-10 py-4 rounded-full shadow-lg hover:bg-gray-100 transition">
+    Explore Now →
+  </button>
+</div>
       </div>
     </section>
   );

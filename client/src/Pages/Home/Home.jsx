@@ -6,6 +6,7 @@ import Categories from "../../Component/home/Categories";
 import FeaturedTours from "../../Component/home/Features";
 import Testimonials from "../../Component/home/Testimonials";
 import FeaturedPlaces from "../../Component/home/FeaturePlaces";
+import Newsletter from "../../Component/home/newsletter";
 function Home() {
   return (
     <>
@@ -16,6 +17,7 @@ function Home() {
       <FeaturedPlaces/>
       <FeaturedTours />
       <Testimonials />
+      <Newsletter/>
       <Footer />
     </>
   );

@@ -8,7 +8,7 @@ function FootBar(){
              <div>
              <h2>AI TOURISM</h2>
              </div>
-            <p clasName="text-gray-300">Explore the world with AI-powered travel recommendations.
+            <p className="text-gray-300">Explore the world with AI-powered travel recommendations.
 
             </p>
             <div>

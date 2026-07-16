@@ -5,6 +5,7 @@ import PopularDestinations from "../../Component/home/PopularDestinations";
 import Categories from "../../Component/home/Categories";
 import FeaturedTours from "../../Component/home/Features";
 import Testimonials from "../../Component/home/Testimonials";
+import FeaturedPlaces from "../../Component/home/FeaturePlaces";
 function Home() {
   return (
     <>
@@ -12,6 +13,7 @@ function Home() {
       <Hero />
       <PopularDestinations />
       <Categories />
+      <FeaturedPlaces/>
       <FeaturedTours />
       <Testimonials />
       <Footer />

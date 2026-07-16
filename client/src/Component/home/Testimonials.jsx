@@ -1,27 +1,9 @@
-const testimonials = [
-  {
-    name: "Rahul Sharma",
-    country: "India",
-    review:
-      "This AI Tourism Guide made planning my vacation incredibly easy. Highly recommended!"
-  },
-  {
-    name: "Emily Johnson",
-    country: "USA",
-    review:
-      "The destination suggestions and budget planner were fantastic."
-  },
-  {
-    name: "Aarav Patel",
-    country: "India",
-    review:
-      "Loved the hotel recommendations and emergency location feature."
-  }
-];
+import testimonials from "../../data/home/testimonial";
 
 function Testimonials() {
   return (
     <section className="py-16 bg-white">
+
       <div className="max-w-7xl mx-auto px-6">
 
         <h2 className="text-4xl font-bold text-center mb-12">
@@ -30,12 +12,17 @@ function Testimonials() {
 
         <div className="grid md:grid-cols-3 gap-8">
 
-          {testimonials.map((user, index) => (
+          {testimonials.map((user) => (
+
             <div
-              key={index}
+              key={user.id}
               className="bg-slate-100 rounded-xl p-8 shadow"
             >
-              <p className="italic text-gray-700">
+              <div className="text-yellow-500 text-xl">
+                {"⭐".repeat(user.rating)}
+              </div>
+
+              <p className="italic text-gray-700 mt-4">
                 "{user.review}"
               </p>
 
@@ -46,12 +33,15 @@ function Testimonials() {
               <p className="text-gray-500">
                 {user.country}
               </p>
+
             </div>
+
           ))}
 
         </div>
 
       </div>
+
     </section>
   );
 }

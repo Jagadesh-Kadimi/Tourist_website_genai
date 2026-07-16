@@ -1,15 +1,9 @@
-const categories = [
-  "🏖 Beaches",
-  "🛕 Temples",
-  "🏔 Mountains",
-  "🌳 Nature",
-  "🏰 Heritage",
-  "🏙 Cities",
-];
+import categories from "../../data/home/categories";
 
 function Categories() {
   return (
     <section className="py-16 bg-white">
+
       <div className="max-w-7xl mx-auto px-6">
 
         <h2 className="text-4xl font-bold text-center mb-12">
@@ -18,20 +12,28 @@ function Categories() {
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
 
-          {categories.map((category, index) => (
+          {categories.map((category) => (
+
             <div
-              key={index}
+              key={category.id}
               className="bg-blue-50 rounded-xl p-6 text-center shadow hover:shadow-xl hover:scale-105 transition cursor-pointer"
             >
-              <h3 className="font-semibold text-lg">
-                {category}
+              <div className="text-5xl">
+                {category.icon}
+              </div>
+
+              <h3 className="mt-4 font-semibold">
+                {category.name}
               </h3>
+
             </div>
+
           ))}
 
         </div>
 
       </div>
+
     </section>
   );
 }

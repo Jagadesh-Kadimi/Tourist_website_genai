@@ -1,39 +1,9 @@
-const features = [
-  {
-    icon: "🤖",
-    title: "AI Trip Planner",
-    desc: "Plan your journey with AI recommendations."
-  },
-  {
-    icon: "💰",
-    title: "Budget Estimator",
-    desc: "Estimate travel expenses before your trip."
-  },
-  {
-    icon: "🌐",
-    title: "Language Translation",
-    desc: "Translate local languages instantly."
-  },
-  {
-    icon: "🚑",
-    title: "Emergency Support",
-    desc: "Locate nearby hospitals and emergency centers."
-  },
-  {
-    icon: "🧭",
-    title: "Smart Navigation",
-    desc: "Find the fastest travel routes."
-  },
-  {
-    icon: "👨‍🏫",
-    title: "Guide Booking",
-    desc: "Hire local guides with verified profiles."
-  }
-];
+import features from "../../data/home/features";
 
 function Features() {
   return (
     <section className="py-16 bg-slate-100">
+
       <div className="max-w-7xl mx-auto px-6">
 
         <h2 className="text-4xl font-bold text-center mb-12">
@@ -42,9 +12,10 @@ function Features() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-          {features.map((feature, index) => (
+          {features.map((feature) => (
+
             <div
-              key={index}
+              key={feature.id}
               className="bg-white rounded-xl p-8 shadow hover:shadow-xl transition"
             >
               <div className="text-5xl mb-4">
@@ -56,14 +27,17 @@ function Features() {
               </h3>
 
               <p className="text-gray-600">
-                {feature.desc}
+                {feature.description}
               </p>
+
             </div>
+
           ))}
 
         </div>
 
       </div>
+
     </section>
   );
 }

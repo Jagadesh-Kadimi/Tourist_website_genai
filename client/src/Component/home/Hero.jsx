@@ -27,7 +27,8 @@ function Hero() {
           </div>
 
         <div className="mt-8">
-  <button className="bg-white text-blue-600 font-bold px-10 py-4 rounded-full shadow-lg hover:bg-gray-100 transition">
+  <button className="bg-white text-blue-600 font-bold px-10 py-4 rounded-full shadow-lg hover:bg-gray-100 transition cursor-pointer"
+      onClick={()=>document.getElementById("popular-destinations")?.scrollIntoView({behaviour:"smooth"})}>
     Explore Now →
   </button>
 </div>

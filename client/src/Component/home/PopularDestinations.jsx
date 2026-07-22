@@ -2,14 +2,14 @@ import destinations from "../../data/home/destination";
 
 function PopularDestinations() {
   return (
-    <section className="py-16 bg-slate-100">
+    <section className="py-16 bg-slate-100" id="popular-destinations">
       <div className="max-w-7xl mx-auto px-6">
 
         <h2 className="text-4xl font-bold text-center mb-12">
           Popular Destinations
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 container mx-auto cursor-pointer ">
 
           {destinations.map((place) => (
             <div
@@ -19,10 +19,10 @@ function PopularDestinations() {
               <img
                 src={place.image}
                 alt={place.name}
-                className="w-full h-56 object-cover"
+                className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
               />
 
-              <div className="p-5">
+              <div className="p-5  ">
 
                 <h3 className="text-xl font-bold">
                   {place.name}

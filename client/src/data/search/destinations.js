@@ -1,38 +1,6 @@
-const destinations = [
-  {
-    id: 1,
-    name: "Goa",
-    location: "Goa, India",
-    rating: 4.8,
-    price: "₹5,000",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiNiYKe3OziQyEEh6yoJltraLA0U2pLc6wgy2p9lmRqA&s=10",
-  },
-  {
-    id: 2,
-    name: "Araku Valley",
-    location: "Andhra Pradesh",
-    rating: 4.7,
-    price: "₹3,500",
-    image: "https://www.kahanchale.com/wp-content/uploads/2025/07/download-90.jpeg",
-  },
-  {
-    id: 3,
-    name: "Taj Mahal",
-    location: "Agra",
-    rating: 4.9,
-    price: "₹6,200",
-    image: "https://lh3.googleusercontent.com/grass-cs/ACvplmM3W-IsGx_3yRe2r5tHMa9R-pCEkJcPsEUc7PkXETySCAr9gMw5E9QYuiuS7FKPppAwPeZGab0h-6EtVo_s_Eq5Fn8g8G7ylS3KoLxz2GPfCTKpMFHztCWx-ZGrS-77t7obxmGd=w270-h312-n-k-no",
-  },
-  {
-    id: 4,
-    name: "Munnar",
-    location: "Kerala",
-    rating: 4.8,
-    price: "₹4,800",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6A2CH1x778y6-CpgWEXaA6pz0iZotjyuI43RJ7P4snA&s=10",
-  },
-  {
-        id:5,
+const Destination =[ 
+    {
+        id:1,
         name:"Vijayawada",
         category:"City Famous for its rich cultural heritage and historical significance. and is known for its beautiful temples, scenic landscapes, and vibrant festivals.",
         image:"https://www.tirthayatra.org/wp-content/uploads/2025/05/108082343_952688908527460_1245978560174854829_n-1-1.jpg",
@@ -41,7 +9,7 @@ const destinations = [
 
     },
     {
-        id:6,
+        id:2,
         name:"visakhapatnam",
         category:"City Famous for its beautiful beaches, scenic hills, and rich cultural heritage. It is known for its vibrant tourism industry and is a popular destination for both domestic and international travelers.",
         image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjjEt8vyLiVoXHbpMAp62T3NUfycUdJHj3R0F1wXgV2Q&s=10",
@@ -49,7 +17,7 @@ const destinations = [
         price:1500
     },
     {
-    id: 7,
+    id: 3,
     name: "Munnar",
     state: "Kerala",
     category: "Hill Station",
@@ -58,7 +26,7 @@ const destinations = [
     price: 5000,
   },
   {
-    id: 8,
+    id: 4,
     name: "Hampi",
     state: "Karnataka",
     category: "Heritage",
@@ -67,5 +35,4 @@ const destinations = [
     price: 2800,
   }
 ];
-
-export default destinations;
+export default Destination;

@@ -1,6 +1,9 @@
+import { Link } from "react-router-dom";
+
 function DestinationCard({ destination }) {
   return (
     <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+
       <img
         src={destination.image}
         alt={destination.name}
@@ -8,15 +11,17 @@ function DestinationCard({ destination }) {
       />
 
       <div className="p-5">
+
         <h3 className="text-xl font-bold">
           {destination.name}
         </h3>
 
         <p className="text-gray-500 mt-2">
-          📍 {destination.state || "Unknown"}
+          📍 {destination.location}
         </p>
 
         <div className="flex justify-between items-center mt-4">
+
           <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">
             ⭐ {destination.rating}
           </span>
@@ -24,11 +29,16 @@ function DestinationCard({ destination }) {
           <span className="font-bold text-blue-600">
             ₹{destination.price}
           </span>
+
         </div>
 
-        <button className="mt-5 w-full bg-blue-600 text-white py-3 rounded-xl hover:bg-blue-700 transition">
+        <Link
+          to={`/destination/${destination.id}`}
+          className="mt-5 block w-full bg-blue-600 text-white text-center py-3 rounded-xl hover:bg-blue-700 transition"
+        >
           View Details
-        </button>
+        </Link>
+
       </div>
     </div>
   );

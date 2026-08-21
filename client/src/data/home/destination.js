@@ -127,7 +127,12 @@ const destinations = [
   "Pulihora",
   "Andhra Meals"
 ],
-
+images: [
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7XR5CJx30oTJTd5bLVLxxbhrBmkSN263RqAg-FjacDQ&s=10",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnaOrI6CY5cy9tl_ObWzTek_SEj0aeri2RFYD0ZyzPXLA6ngB9C-xE-Vg&s=10",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNAQDtuuzw8Nid__PF04sUasyICf-eK8m5K-TOAiu2uW3lVI4gp-lAcq8&s=10",
+  "https://hblimg.mmtcdn.com/content/hubble/img/vijayawada_imgs/mmt/activities/m_Kanaka_durga_temple_3_l_437_583.jpg"
+],
   },
 
   {

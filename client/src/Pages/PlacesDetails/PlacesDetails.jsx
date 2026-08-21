@@ -1,9 +1,13 @@
 import { useParams, Link } from "react-router-dom";
+import { useState } from "react";
+import TripPlanner from "../../Component/details/TripPlanner";
 import destinations from "../../data/home/destination";
-
+import Gallery from "../../Component/details/Gallery";
+import NearbyPlaces from "../../Component/details/NearByPlaces";
+import LocationMap from "../../Component/details/LocationMap";
 function PlacesDetails() {
   const { id } = useParams();
-
+  const [showPlanner, setShowPlanner] = useState(false);
   const destination = destinations.find(
     (item) => item.id === Number(id)
   );
@@ -144,9 +148,12 @@ function PlacesDetails() {
               Starting price
             </p>
 
-            <button className="w-full mt-8 bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-4 rounded-xl transition">
-              Plan My Trip
-            </button>
+            <button
+                  onClick={() => setShowPlanner(true)}
+                  className="w-full mt-8 bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-4 rounded-xl transition"
+                >
+                  Plan My Trip
+          </button>
 
             <Link
               to="/search"
@@ -296,8 +303,10 @@ function PlacesDetails() {
           <p className="text-gray-500 text-sm mt-2">
             Popular local food to try in {destination.name}.
           </p>
-
+       
         </div>
+        
+        
 
       ))}
 
@@ -311,9 +320,37 @@ function PlacesDetails() {
 
   )}
 
-</section>
+        </section>
+        <section>
+           <div>
+          <Gallery
+            images={destination.images}
+            name={destination.name}
+          />
+          </div>
+      <div>
+        <NearbyPlaces
+        currentId={destination.id}
+        currentLocation={destination.location}
+        destinations={destinations}
+      />
+      </div>
+
+      <div>
+        <LocationMap
+        name={destination.name}
+        location={destination.location}
+      />
+      </div>
+        </section>
 
       </section>
+      {showPlanner && (
+  <TripPlanner
+    destination={destination}
+    onClose={() => setShowPlanner(false)}
+  />
+)}
 
     </main>
   );
